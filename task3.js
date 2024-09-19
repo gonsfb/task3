@@ -38,6 +38,7 @@ class moveChecker {
   }
 }
 
+
 class GameComputer {
   constructor(moves) {
     this.moves = moves;
@@ -70,6 +71,7 @@ class GameComputer {
   }
 }
 
+
 class HelpDisplayer {
   constructor(moves) {
     this.moves = moves;
@@ -77,7 +79,7 @@ class HelpDisplayer {
 
   displayHelp() {
     const table = new Table({
-      head: ['< PC\\User >', ...this.moves], // Dynamic column headers based on moves
+      head: ['< PC\\User >', ...this.moves], 
     });
 
     this.moves.forEach((move, i) => {
@@ -94,7 +96,6 @@ class HelpDisplayer {
 }
 
 
-
 class GameMenu {
   constructor(moves) {
     this.moves = moves;
@@ -105,7 +106,7 @@ class GameMenu {
     });
   }
 
-  // Method to display the menu to the user
+  
   displayMenu() {
     console.log('Available moves:');
     this.moves.forEach((move, index) => {
@@ -137,9 +138,7 @@ class GameMenu {
     });
   }
 
-  // Method to display help message
   
-  // Method to play a round and determine the result
   playRound(userChoice) {
     const computerChoice = Math.floor(Math.random() * this.moves.length);
     console.log(`Computer played: ${this.moves[computerChoice]}`);
@@ -165,9 +164,6 @@ class GameMenu {
     this.handleInput();
   }
 }
-
-
-
 
 
 const moves = process.argv.slice(2);
