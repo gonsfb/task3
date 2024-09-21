@@ -46,8 +46,7 @@ class GameComputer {
     this.computerMove = this.chooseMove();
     this.hmac = this.generateHmac();
   }
-
-  // Method to choose a random move for the computer
+  
   chooseMove() {
     const randomIndex = crypto.randomInt(0, this.moves.length);
     return this.moves[randomIndex];
